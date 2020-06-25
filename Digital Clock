@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <conio.h>
+#include <time.h>
+void delay(int number_of_seconds) 
+{ 
+    // Converting time into milli_seconds 
+    int milli_seconds = 1000 * number_of_seconds; 
+  
+    // Storing start time 
+    clock_t start_time = clock(); 
+  
+    // looping till required time is not achieved 
+    while (clock() < start_time + milli_seconds) 
+        ; 
+} 
+int main()
+{
+    int i,j,k;
+    printf("Hi! Welcome  to the digital clock.\n");
+    printf("Set the current time (in format hh:mm):\t");
+    scanf("%d:%d", &i,&j);
+    
+    for(i; i<24; i++)
+    {
+        
+        for(j; j<60; j++)
+        {
+            
+            for(k=0; k<60; k++)
+            {
+                
+                printf("\n %d:%d:%d", i,j,k);
+                
+                delay(500);
+                system("clear");
+            }
+        j=0;
+        printf("\n %d:%d:%d", i,j,k);
+        system("clear");
+        }
+    i=0;
+    printf("\n %d:%d:%d", i,j,k);
+    system("clear");
+    }
+    
+
+    return 0;
+}
