@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <conio.h>
 #include <time.h>
@@ -18,15 +19,15 @@ int main()
     int i,j,k;
     printf("Hi! Welcome  to the digital clock.\n");
     printf("Set the current time (in format hh:mm):\t");
-    scanf("%d:%d", &i,&j);
-    
+    scanf("%d:%d:%d", &i,&j, &k);
+    start : ;
     for(i; i<24; i++)
     {
         
         for(j; j<60; j++)
         {
             
-            for(k=0; k<60; k++)
+            for(k; k<60; k++)
             {
                 
                 printf("\n %d:%d:%d", i,j,k);
@@ -34,15 +35,16 @@ int main()
                 delay(500);
                 system("clear");
             }
-        j=0;
+        k=0;
         printf("\n %d:%d:%d", i,j,k);
         system("clear");
         }
-    i=0;
+    j=0;
     printf("\n %d:%d:%d", i,j,k);
     system("clear");
     }
-    
-
+    i=0;
+    goto start;
     return 0;
 }
+
