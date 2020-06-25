@@ -18,7 +18,7 @@ int main()
 {
     int i,j,k;
     printf("Hi! Welcome  to the digital clock.\n");
-    printf("Set the current time (in format hh:mm):\t");
+    printf("Set the current time (in format hh:mm:ss):\t");
     scanf("%d:%d:%d", &i,&j, &k);
     start : ;
     for(i; i<24; i++)
